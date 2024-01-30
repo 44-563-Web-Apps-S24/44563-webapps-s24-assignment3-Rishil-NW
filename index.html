@@ -62,7 +62,29 @@
                 <td>Vyasa</td>
             </tr>
         </table>
+        <hr>
+        <h2>Code Fencing</h2>
+        <p>Node.js 8th Code</p>
+        <pre>
+            const http = require('http');
 
+            http.createServer((request, response) => {
+	                fileSystem.readFile(__dirname + request.url, (error, data) => {
+		                   if (error) {
+			response.writeHead(404, {
+				'Content-Type': 'text/html'
+			});
+			response.end('404: File not found');
+		} else {
+			response.writeHead(200, {
+				'Content-Type': 'text/html'
+			});
+			response.end(data);
+		}
+	});
+}).listen(8000);
+        </pre>
+        <a href="https://code.pieces.app/collections/node-js">Link for Code in Node.js</a>
 
 </body>
 
